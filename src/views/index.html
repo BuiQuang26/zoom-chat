@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>zoom chat</title>
+</head>
+<body>
+    <div class="login-contaier " id="form-login">
+        <div class="login">
+            <input type="text" class="form-input-login" placeholder="name...">
+            <Button class="btn-login">login</Button>
+        </div>
+    </div>
+
+    <div class="app disable" id="app">
+        <div class="app-header">
+            <h3 class="username" id="username"> username </h3>
+            <div class="create-room">
+                <input type="text" class="input-create-room" id="input-create-room" placeholder="name room">
+                <Button class="btn-create-room">create room</Button>
+            </div> 
+        </div>
+        <div class="container">
+            <div class="left">
+                <h3 class="title">Rooms</h3>
+                <ul class="list-room">
+                    <!-- server render -->
+                </ul>
+            </div>
+            <div class="right">
+                <div class="right-header">
+                    <h3 class="title">chat</h3>
+                    <h3 class="currentRoom title" id="currentRoom">you out room</h3>
+                </div>
+                <div class="right-main">
+                    <div class="box-chat">
+                        <ul class="list-message">
+                            <!-- server render -->
+                        </ul>
+                    </div>
+                    <div class="form-message-container ">
+                        <form action="" class="form-send-message disable" autocomplete="off">
+                            <input type="text" class="form-send-input" id="form-send-input">
+                            <button class="btn-submit-form-send" type="submit">send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+     <script src="./js/index.js"></script>
+</body>
+</html>
